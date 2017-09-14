@@ -51,7 +51,7 @@ int command_main(int argc, char *argv[])
     		(luaL_loadstring(L, s) || lua_pcall(L, 0, LUA_MULTRET, 0))
     	#define lua_pcall(L,n,r,f)      lua_pcallk(L, (n), (r), (f), 0, NULL)
     	luaL_openlibs(L);
-    	luaL_dostring(L, p + 3);
+    	luaL_dostring(L, p + 4);
     } else {
       send_write("unknown.\n");
     }
