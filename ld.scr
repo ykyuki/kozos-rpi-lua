@@ -9,8 +9,8 @@ MEMORY
 
 	heap(rw)	: o = 0x10000000, l = 0x02000000 /* 32MB heap of RAM */
 
-	softvec(rw)	: o = 0x1a000000, l = 0x00000040 /* top of RAM */
-	userstack(rw)	: o = 0x1b000000, l = 0x00000000 /* fiq - 16MB */
+	softvec(rw)	: o = 0x19000000, l = 0x00000040 /* top of RAM */
+	userstack(rw)	: o = 0x1a000000, l = 0x01000000 /* fiq - 16MB */
 	bootstack(rw)	: o = 0x1c000000, l = 0x00000000 /* svc - 16MB */
 	intrstack(rw)	: o = 0x1c000000, l = 0x00000000 /* end of RAM */
 }
