@@ -7,7 +7,7 @@
 static int start_threads(int argc, char *argv[])
 {
   kz_run(consdrv_main, "consdrv",  1, 0x200, 0, NULL);
-  kz_run(command_main, "command",  8, 0x200, 0, NULL);
+  kz_run(command_main, "command",  8, 0x2000, 0, NULL);
 
   kz_chpri(15); /* 優先順位を下げて，アイドルスレッドに移行する */
   INTR_ENABLE; /* 割込み有効にする */
